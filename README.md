@@ -11,8 +11,8 @@ excuse to play with kube-doom on a single node rpi4-k8s
 ## software:
 
 - [Ubuntu 20.04.1 LTS ARM](https://ubuntu.com/download/server/arm)
-- [storax/kubedoom] (https://github.com/storax/kubedoom)
-- [nginx] (https://www.nginx.com/)
+- [storax/kubedoom](https://github.com/storax/kubedoom)
+- [nginx](https://www.nginx.com/)
 - [balana Etcher](https://www.balena.io/etcher/)
 - [grafana](https://grafana.com/)
 
