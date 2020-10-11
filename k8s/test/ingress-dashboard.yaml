@@ -1,0 +1,26 @@
+---
+  # requires secret-test-tls
+  apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    name: dashboard-google
+    namespace: kube-system
+    annotations:
+      nginx.ingress.kubernetes.io/secure-backends: "true"
+      nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+  spec:
+    tls:
+      - hosts:
+        - k8sdoom.vin-lab.com
+        secretName: secret-test-tls
+    rules:
+      - host: k8sdoom.vin-lab.com
+        http:
+          paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service: 
+                name: kubernetes-dashboard
+                port:
+                  number: 443

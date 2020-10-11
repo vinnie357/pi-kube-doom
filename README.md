@@ -3,7 +3,12 @@ excuse to play with kube-doom on a single node rpi4-k8s
 ## Overview:
   
   excuse to setup kube doom on a single node k8s cluster running on raspberry pi, will attempt to cover assumptions about hardware and other setup with readmes and steps.
-  
+## FAQ
+
+  - Yes, there are other ways to do each part of this.( pxe boot, images, etc..)
+    - I welcome Pull Requests showing the addtional ways to do each part
+  - Yes, you can do this with a cluster. my hope was to lower the barriers to entry.
+
 ## hardware:
 
 [canakit rpi4 4/8gig](https://www.canakit.com/raspberry-pi-4-starter-kit.html)
@@ -14,6 +19,7 @@ excuse to play with kube-doom on a single node rpi4-k8s
 - [storax/kubedoom](https://github.com/storax/kubedoom)
 - [nginx](https://www.nginx.com/)
 - [balana Etcher](https://www.balena.io/etcher/)
+- [raspberrypi imager](https://www.raspberrypi.org/downloads/)
 - [grafana](https://grafana.com/)
 
 ## setup:

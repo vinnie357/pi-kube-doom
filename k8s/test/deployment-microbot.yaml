@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microbot-deployment
+  labels:
+    app: microbot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: microbot
+  template:
+    metadata:
+      labels:
+        app: microbot
+    spec:
+      containers:
+      - name: microbot
+        # non arm image: dontrebootme/microbot:v1
+        image: cdkbot/microbot-arm64:latest
+        ports:
+        - containerPort: 80
