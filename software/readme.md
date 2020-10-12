@@ -1,25 +1,28 @@
 # install kubernetes
 
 ## option 1 SNAPs
-  https://microk8s.io/docs/
-  https://microk8s.io/docs/install-alternatives
-  <!-- Raspberry Pi/ARM
-  Running MicroK8s on some ARM hardware may run into difficulties because cgroups (required!) are not enabled by default. This can be remedied on the Rasberry Pi by editing the boot parameters: 
-  https://askubuntu.com/questions/1189480/raspberry-pi-4-ubuntu-19-10-cannot-enable-cgroup-memory-at-boostrap
   
-  # old
-  echo 'cgroup_enable=memory cgroup_memory=1' >> /boot/firmware/cmdline.txt
-  sudo sh -c "echo 'cgroup_enable=memory cgroup_memory=1' >> /boot/firmware/cmdline.txt"
-  reboot to take effect
-  sudo reboot
-  # check with
-  cat /proc/cmdline
-  if it doesn't work the first time make sure your arguments are all on one line and reboot again.
-   --> 
+  https://microk8s.io/docs/
+
+  https://microk8s.io/docs/install-alternatives
+  
+  ```bash 
+  #Raspberry Pi/ARM
+  #Running MicroK8s on some ARM hardware may run into difficulties because cgroups (required!) are not enabled by default. This can be remedied on the Rasberry Pi by editing the #boot parameters: 
+  #https://askubuntu.com/questions/1189480/raspberry-pi-4-ubuntu-19-10-cannot-enable-cgroup-memory-at-boostrap
+  
+  ## old
+  #echo 'cgroup_enable=memory cgroup_memory=1' >> /boot/firmware/cmdline.txt
+  #sudo sh -c "echo 'cgroup_enable=memory cgroup_memory=1' >> /boot/firmware/cmdline.txt"
+  #reboot to take effect
+  #sudo reboot
+  ## check with
+  #cat /proc/cmdline
+  #if it doesn't work the first time make sure your arguments are all on one line and reboot again.  
   sudo snap install microk8s --classic
   sudo microk8s.status --wait-ready
   sudo microk8s.enable dns dashboard registry
-
+  ```
   ### commands
 
   microk8s.kubectl command
