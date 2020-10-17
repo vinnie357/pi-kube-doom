@@ -3,6 +3,15 @@ excuse to play with kube-doom on a single node rpi4-k8s
 ## Overview:
   
   excuse to setup kube doom on a single node k8s cluster running on raspberry pi, will attempt to cover assumptions about hardware and other setup with readmes and steps.
+
+## Status
+
+  well seems like ARM64 was left out of all of these parties, so going to see if I can't build some arm versions.
+  ideally ending in docker images we can run on the pi.
+  going to hack on that in my [fork](https://github.com/vinnie357/kubedoom) 
+  
+  [(I have no idea what I am doing dog)](https://i2.wp.com/gaxstudio.com/wp-content/uploads/2017/08/i-have-no-idea-what-im-doing-dog-feat-1-620x400.jpg?ssl=1)
+
 ## FAQ
 
   - Yes, there are other ways to do each part of this.( pxe boot, images, etc..)
@@ -17,25 +26,30 @@ excuse to play with kube-doom on a single node rpi4-k8s
 
 - [Ubuntu 20.04.1 LTS ARM](https://ubuntu.com/download/server/arm)
 - [storax/kubedoom](https://github.com/storax/kubedoom)
-- [nginx](https://www.nginx.com/)
+- [NGINX](https://www.nginx.com/)
 - [balana Etcher](https://www.balena.io/etcher/)
 - [raspberrypi imager](https://www.raspberrypi.org/downloads/)
 - [grafana](https://grafana.com/)
 
-## setup:
-
-  - download ubuntu 20.04 and clone install to flash media in canakit.
-  - base rpi4 setup
-    - remote access
-    - ssh keys
-    - network config
-  - setup single node k8s
-    - persistent storage?
-  - deploy services to cluster
-    - grafana
-    - kube doom
-    - nginx ingress
-  - expose services with nignx ingress
-    - kube doom
-    - grafana dashboard
-  - play kube doom! ( likely the most important part of all of this)
+## setup overview:
+ 
+ Break down for each is in their respective folders
+  - [hardware](hardware/readme.md)
+    - download ubuntu 20.04 and clone install to flash media in canakit.
+    - base rpi4 setup
+      - remote access
+      - ssh keys
+      - network config
+  - [software](software/readme.md)
+    - [k8s](software/k8s/readme.md)
+      - setup single node k8s
+        - persistent storage?
+      - deploy services to cluster
+        - grafana
+        - kube doom
+        - nginx ingress
+      - expose services with nignx ingress
+        - kube doom
+        - grafana dashboard
+    - [kubedoom](software/kubedoom/readme.md)
+      - play kube doom! ( likely the most important part of all of this)

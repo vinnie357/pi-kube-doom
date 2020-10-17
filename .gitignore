@@ -1,0 +1,7 @@
+## mesh
+# image
+nginx-mesh-images-*.tar.gz
+nginx-mesh-images-*.tar.gz*
+## ctl
+nginx-meshctl_linux.gz
+nginx-meshctl_linux.gz*
