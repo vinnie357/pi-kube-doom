@@ -5,7 +5,9 @@ excuse to play with kube-doom on a single node rpi4-k8s
   excuse to setup kube doom on a single node k8s cluster running on raspberry pi, will attempt to cover assumptions about hardware and other setup with readmes and steps.
 
 ## Status
-
+ 
+  [GOOD NEWS EVERYONE](https://i.ytimg.com/vi/YRCzEqkCoiM/maxresdefault.jpg) its alive! just a few build args for arm64 and we are off to the races you will need the dockerfile in my fork. 
+  
   well seems like ARM64 was left out of all of these parties, so going to see if I can't build some arm versions.
   ideally ending in docker images we can run on the pi.
   going to hack on that in my [fork](https://github.com/vinnie357/kubedoom) 
