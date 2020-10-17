@@ -91,10 +91,19 @@ Demon: kubedoom/kubedoom-667db567b-9446m, 1581133579
 
 ### expose your service
 
+quick:
+
+```bash
+kubectl -n kubedoom port-forward service/kubedoom-service 5901:5901
+```
+ingress TCP:
+
 https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/
 
 
 ## connect with VNC
+
+default creds idbehold from docker build
 
 linux
 
